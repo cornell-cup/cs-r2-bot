@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BotComm", "..\..\R2Bot\BotComm\BotComm.vcxproj", "{E4D44729-09A6-4D26-A369-D09F2A630EF3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Kinect", "Kinect\Kinect.vcxproj", "{6B37A327-54C0-4E43-A852-B70A41CAC630}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lidar", "Lidar\Lidar.vcxproj", "{8E2A813C-F61B-4B6C-BA43-CD457BBEA148}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vision", "Vision.vcxproj", "{6084DE33-F7F9-4C99-9E66-BA3AF14BDC35}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapViewer", "MapViewer\MapViewer.vcxproj", "{A7A4F4A9-50F9-475C-89AD-6D8E5E1B5E1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4D44729-09A6-4D26-A369-D09F2A630EF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E4D44729-09A6-4D26-A369-D09F2A630EF3}.Debug|Win32.Build.0 = Debug|Win32
+		{E4D44729-09A6-4D26-A369-D09F2A630EF3}.Release|Win32.ActiveCfg = Release|Win32
+		{E4D44729-09A6-4D26-A369-D09F2A630EF3}.Release|Win32.Build.0 = Release|Win32
+		{6B37A327-54C0-4E43-A852-B70A41CAC630}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B37A327-54C0-4E43-A852-B70A41CAC630}.Debug|Win32.Build.0 = Debug|Win32
+		{6B37A327-54C0-4E43-A852-B70A41CAC630}.Release|Win32.ActiveCfg = Release|Win32
+		{6B37A327-54C0-4E43-A852-B70A41CAC630}.Release|Win32.Build.0 = Release|Win32
+		{8E2A813C-F61B-4B6C-BA43-CD457BBEA148}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E2A813C-F61B-4B6C-BA43-CD457BBEA148}.Debug|Win32.Build.0 = Debug|Win32
+		{8E2A813C-F61B-4B6C-BA43-CD457BBEA148}.Release|Win32.ActiveCfg = Release|Win32
+		{8E2A813C-F61B-4B6C-BA43-CD457BBEA148}.Release|Win32.Build.0 = Release|Win32
+		{6084DE33-F7F9-4C99-9E66-BA3AF14BDC35}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6084DE33-F7F9-4C99-9E66-BA3AF14BDC35}.Debug|Win32.Build.0 = Debug|Win32
+		{6084DE33-F7F9-4C99-9E66-BA3AF14BDC35}.Release|Win32.ActiveCfg = Release|Win32
+		{6084DE33-F7F9-4C99-9E66-BA3AF14BDC35}.Release|Win32.Build.0 = Release|Win32
+		{A7A4F4A9-50F9-475C-89AD-6D8E5E1B5E1B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A7A4F4A9-50F9-475C-89AD-6D8E5E1B5E1B}.Debug|Win32.Build.0 = Debug|Win32
+		{A7A4F4A9-50F9-475C-89AD-6D8E5E1B5E1B}.Release|Win32.ActiveCfg = Release|Win32
+		{A7A4F4A9-50F9-475C-89AD-6D8E5E1B5E1B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

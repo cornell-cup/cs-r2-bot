@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\..\Libraries\OpenCV\opencv.props" />
+    <Import Project="..\..\R2Bot\botcomm.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <VISION_PATH>$(MSBuildThisFileDirectory)</VISION_PATH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(VISION_PATH);$(IncludePath)</IncludePath>
+    <LibraryPath>$(VISION_PATH)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>Lidar.lib;Kinect.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="VISION_PATH">
+      <Value>$(VISION_PATH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

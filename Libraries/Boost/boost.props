@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <BOOST_PATH>$(MSBuildThisFileDirectory)</BOOST_PATH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(BOOST_PATH)include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LibraryPath>$(BOOST_PATH)lib\$(Configuration);$(LibraryPath)</LibraryPath>
+    <_PropertySheetDisplayName>boost</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>%(Command)
+copy /y "$(BOOST_PATH)lib\$(Configuration)\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <ClCompile>
+      <PreprocessorDefinitions>
+      </PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="BOOST_PATH">
+      <Value>$(BOOST_PATH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
