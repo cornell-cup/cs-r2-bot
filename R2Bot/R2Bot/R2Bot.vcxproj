@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Lidar\project\src\rplidar_controller\RPLidarController.cpp" />
     <ClCompile Include="src\BaseConnection.cpp" />
     <ClCompile Include="src\BaseToBotImpl.cpp" />
     <ClCompile Include="src\Config.cpp" />
@@ -30,6 +31,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Lidar\project\src\rplidar_controller\RPLidarController.h" />
     <ClInclude Include="src\BaseConnection.h" />
     <ClInclude Include="src\BaseToBotImpl.h" />
     <ClInclude Include="src\Config.h" />
@@ -45,9 +47,6 @@
     <ClInclude Include="src\WheelController.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\config.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\SLAM\Vision\Kinect\Kinect.vcxproj">
@@ -72,9 +71,15 @@
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
+    <ProjectReference Include="..\Lidar\project\src\rplidar_driver\rplidar_driver.vcxproj">
+      <Project>{1f0aa469-8a8f-4ada-931d-967d2c5996df}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\PCIE\PCIE.vcxproj">
       <Project>{6e8b636e-f6da-4165-bd80-aba225ba7b99}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\config.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{98651E7F-1A57-42B0-8C45-1326C636C8CA}</ProjectGuid>
@@ -113,8 +118,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <SourcePath>.;src;$(SourcePath)</SourcePath>
-    <LibraryPath>C:\Users\David\Documents\Visual Studio 2010\Projects\Cup\R2Bot\Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>src;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\r2-bot\R2Bot\Lidar\output\win32\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\r2-bot\R2Bot\Lidar\project\src\rplidar_controller;D:\r2-bot\R2Bot\Lidar\sdk\include;src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -127,18 +132,20 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\r2-bot\R2Bot\Lidar\project\src\rplidar_controller;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
       <AdditionalOptions>/Zm150 %(AdditionalOptions)</AdditionalOptions>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>winmm.lib;Lidar.lib;Kinect.lib;iced.lib;iceutild.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>rplidar_driver.lib;winmm.lib;Lidar.lib;Kinect.lib;iced.lib;iceutild.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/VERBOSE %(AdditionalOptions)</AdditionalOptions>
+      <GenerateMapFile>Yes</GenerateMapFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

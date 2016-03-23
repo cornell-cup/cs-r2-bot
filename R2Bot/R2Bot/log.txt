@@ -24,3 +24,93 @@
 [17:01:05 ERROR] main: runtime_error: Failed to open PCIE
 [01:26:19 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
 [01:26:27 ERROR] main: runtime_error: Failed to open PCIE
+[19:26:34 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[19:26:34 ERROR] main: runtime_error: Failed to connect to serial port
+[19:26:45 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[19:26:45 ERROR] main: runtime_error: Failed to connect to serial port
+[20:20:13 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:20:13 ERROR] main: runtime_error: Failed to connect to serial port
+[20:44:12 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:44:12 ERROR] main: runtime_error: Failed to connect to serial port
+[20:47:37 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:47:37 ERROR] main: runtime_error: Failed to connect to serial port
+[20:47:52 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:47:52 ERROR] main: runtime_error: Failed to connect to serial port
+[20:53:42 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:53:42 ERROR] main: runtime_error: Failed to connect to serial port
+[20:55:06 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:55:06 ERROR] main: runtime_error: Failed to connect to serial port
+[20:55:27 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:55:27 ERROR] main: runtime_error: Failed to connect to serial port
+[20:57:18 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:57:18 ERROR] main: runtime_error: Failed to connect to serial port
+[20:58:28 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:58:28 ERROR] main: runtime_error: Failed to connect to serial port
+[20:59:54 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[20:59:54 ERROR] main: runtime_error: Failed to connect to serial port
+[21:03:01 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[21:03:01 ERROR] main: runtime_error: Failed to connect to serial port
+[21:03:52 ERROR] Failed to read config file: can not read options configuration file 'config.txt'
+[21:03:52 ERROR] main: runtime_error: Failed to connect to serial port
+[21:04:32 ERROR] Failed to read config file: can not read options configuration file '..\res\config.txt'
+[21:04:32 ERROR] main: runtime_error: Failed to connect to serial port
+[21:05:15 ERROR] Failed to read config file: unrecognised option 'Devices.ArduinoComPort'
+[21:05:15 ERROR] main: runtime_error: Failed to connect to serial port
+[21:05:40 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[21:05:40 ERROR] main: runtime_error: Failed to connect to serial port
+[21:06:09 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[21:06:09 ERROR] main: runtime_error: Failed to connect to serial port
+[21:07:32 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[21:07:32 ERROR] main: runtime_error: Failed to connect to serial port
+[21:07:58 ERROR] Failed to read config file: unrecognised option 'Devices.KinectComPort'
+[21:07:58 ERROR] main: runtime_error: Failed to connect to serial port
+[21:09:41 ERROR] Failed to read config file: boost::bad_any_cast: failed conversion using boost::any_cast
+[21:09:41 ERROR] main: runtime_error: Failed to connect to serial port
+[21:14:13 ERROR] Failed to read config file: the option 'Devices.FlapComPort' is required but missing
+[21:14:13 ERROR] main: runtime_error: Failed to connect to serial port
+[21:14:41 ERROR] Failed to read config file: the option 'Log.RemoteLogIp' is required but missing
+[21:14:41 ERROR] main: runtime_error: Failed to connect to serial port
+[21:15:05 ERROR] Failed to read config file: boost::bad_any_cast: failed conversion using boost::any_cast
+[21:15:05 ERROR] main: runtime_error: Failed to connect to serial port
+[21:17:12 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:17:12 ERROR] main: runtime_error: Failed to connect to serial port
+[21:18:58 ERROR] main: runtime_error: Failed to connect to serial port
+[21:19:45 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:19:45 ERROR] main: runtime_error: Failed to connect to serial port
+[21:20:16 ERROR] Failed to read config file: the option 'Log.RemoteLogIp' is required but missing
+[21:20:16 ERROR] main: runtime_error: Failed to connect to serial port
+[21:21:50 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:21:50 ERROR] main: runtime_error: Failed to connect to serial port
+[21:24:06 ERROR] main: runtime_error: Failed to connect to serial port
+[21:26:22 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:26:22 ERROR] main: runtime_error: Failed to connect to serial port
+[21:27:32 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:27:32 ERROR] main: runtime_error: Failed to connect to serial port
+[21:28:18 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:28:18 ERROR] main: runtime_error: Failed to connect to serial port
+[21:29:18 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:29:18 ERROR] main: runtime_error: Failed to connect to serial port
+[21:30:13 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:30:13 ERROR] main: runtime_error: Failed to connect to serial port
+[21:30:52 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:30:52 ERROR] main: runtime_error: Failed to connect to serial port
+[21:31:18 ERROR] Failed to read config file: boost::bad_any_cast: failed conversion using boost::any_cast
+[21:31:18 ERROR] main: runtime_error: Failed to connect to serial port
+[21:32:20 ERROR] Failed to read config file: boost::bad_any_cast: failed conversion using boost::any_cast
+[21:32:20 ERROR] main: runtime_error: Failed to open PCIE
+[21:32:51 ERROR] Failed to read config file: the option 'Log.RemoteLogIp' is required but missing
+[21:32:51 ERROR] main: runtime_error: Failed to open PCIE
+[21:33:14 ERROR] Failed to read config file: unrecognised option 'Network.RemoteLogIp'
+[21:33:14 ERROR] main: runtime_error: Failed to open PCIE
+[21:33:42 ERROR] main: runtime_error: Failed to connect to serial port
+[21:34:16 ERROR] main: runtime_error: Failed to connect to serial port
+[21:34:34 ERROR] main: runtime_error: Failed to connect to serial port
+[21:36:15 ERROR] main: runtime_error: Failed to connect to serial port
+[21:36:46 ERROR] main: runtime_error: Failed to connect to serial port
+[21:37:18 ERROR] Failed to read config file: unrecognised option 'Devices.ArduinoComPort'
+[23:25:05 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[23:25:22 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[23:25:49 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[23:26:39 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[23:52:23 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[23:57:12 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'

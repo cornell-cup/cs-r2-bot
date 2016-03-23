@@ -18,8 +18,8 @@
 // </auto-generated>
 //
 
-#ifndef __C__Users_vision_Desktop_CornellCup2015_R2Bot_BotComm_R2Comm_h__
-#define __C__Users_vision_Desktop_CornellCup2015_R2Bot_BotComm_R2Comm_h__
+#ifndef __D__r2_bot_R2Bot_BotComm_R2Comm_h__
+#define __D__r2_bot_R2Bot_BotComm_R2Comm_h__
 
 #include <Ice/ProxyF.h>
 #include <Ice/ObjectF.h>

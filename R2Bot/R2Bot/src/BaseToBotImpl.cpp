@@ -12,12 +12,13 @@ const float CM_PER_FT = 30.48f;
 namespace R2D2 {
 
 	BaseToBotImpl::BaseToBotImpl(
-		WheelController& wctrl,
-		HeadController& hctrl,
+		//WheelController& wctrl,
+		//HeadController& hctrl,
 		uint64_t connectionTimeout,
 		boost::asio::io_service& service)
-		: wheelController(wctrl),
-		  headController(hctrl),
+		: 
+		//wheelController(wctrl),
+		//  headController(hctrl),
 		  connectionTimeout(connectionTimeout),
 		  lastPingTime(0),
 		  pingTimer(service) { }
@@ -39,7 +40,7 @@ namespace R2D2 {
 			pingTimer.async_wait([this](const boost::system::error_code& e) {
 				if (e != boost::asio::error::operation_aborted) {
 					Log::warn("Lost Base connection; stopping motors");
-					wheelController.moveSpeed(0, 0);
+					//wheelController.moveSpeed(0, 0);
 				}
 			});
 
@@ -63,25 +64,25 @@ namespace R2D2 {
 
 	void BaseToBotImpl::move(int lSpeed, int rSpeed, const Ice::Current&) {
 		Log::trace("move %d %d", lSpeed, rSpeed);
-		wheelController.moveSpeed(lSpeed, rSpeed);
+		//wheelController.moveSpeed(lSpeed, rSpeed);
 	}
 
 	void BaseToBotImpl::moveStraight(int dist, const Ice::Current&) {
-		wheelController.moveDist(dist, dist);
+		//wheelController.moveDist(dist, dist);
 	}
 
 	void BaseToBotImpl::turn(int angle, const Ice::Current&) {
-		wheelController.moveDist(-angle, angle);
+		//wheelController.moveDist(-angle, angle);
 	}
 
 	void BaseToBotImpl::rotateHead(int angle, const Ice::Current&) {
 		Log::trace("rotateHead %d", angle);
-		headController.moveHead(angle);
+		//headController.moveHead(angle);
 	}
 
 	void BaseToBotImpl::setFlapState(FlapState state, const Ice::Current&) {
 		Log::trace("setFlapState %d", state);
-		headController.moveFlap(state == FLAPOPEN);
+		//headController.moveFlap(state == FLAPOPEN);
 	}
 
 	void BaseToBotImpl::shutdown(const Ice::Current&){

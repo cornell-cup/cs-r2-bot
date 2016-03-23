@@ -12,7 +12,8 @@ namespace R2D2 {
 
 	class BaseToBotImpl : public BaseToBot {
 	public:
-		BaseToBotImpl(WheelController& wctrl, HeadController& hctrl,
+		BaseToBotImpl(
+			//WheelController& wctrl, HeadController& hctrl,
 			uint64_t connectionTimeout, boost::asio::io_service& service);
 		virtual void ping(const Ice::Current& current);
 		virtual void playSound(Sound snd, const Ice::Current&);
@@ -27,9 +28,9 @@ namespace R2D2 {
 
 	private:
 		// R2D2 wheel controls
-		WheelController& wheelController;
+		//WheelController& wheelController;
 		// R2D2 head controls
-		HeadController& headController;
+		//HeadController& headController;
 		// Max time in milliseconds before we consider the connection dead
 		uint64_t connectionTimeout;
 		// Last time we got a ping from base

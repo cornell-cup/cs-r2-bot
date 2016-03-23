@@ -1,0 +1,46 @@
+### R2D2 Configuration Settings ###
+
+[Log]
+
+# Verbosity level. Determines how much is written to log.txt
+# (0) trace, (1) debug, (2) info, (3) warn, (4) error, (5) none
+Verbose = 4
+
+
+[Network]
+
+#Remote Ip address so the shit compiler doesnt complain
+RemoteLogIp = 127.0.0.1
+# Base as server, R2D2 as client
+BasePort = 10001
+
+# Base as client, R2D2 as server
+BotPort = 10000
+
+# R2D2 receives frequent pings from Base to verify that the connection is still
+# active. If there R2D2 doesn't receive a ping for `ConnectionTimeout` millisecs,
+# he halts all motor commands.
+ConnectionTimeout = 1000
+
+
+[Devices]
+
+# Note: COM ports can be given a value of FAKE_SERIAL if you want to test the
+# code without actually using real serial ports. Reads from FAKE_SERIALs return
+# zero bytes, and writes do nothing.
+
+# COM port to which the Arduino is attached.
+# ArduinoComPort = COM1
+
+# COM port to which the Wheels controller is attached.
+# WheelsComPort = COM2
+
+# COM port to which the Head rotation controller is attached.
+# HeadComPort = COM3
+
+# COM port to which the Lidar is attached.
+LidarComPort = \\\\.\\COM22
+
+# COM port to which the Kinect is attached.
+#KinectComPort = COM5
+

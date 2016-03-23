@@ -9,10 +9,11 @@
 #include "Fpga.h"
 #include "VisionCommImpl.h"
 #include "Util.h"
+#include "RPLidarController.h"
 
 using namespace R2D2;
 
-const char CONFIG_FILE[] = "config.txt";
+const char CONFIG_FILE[] = "D:\\r2-bot\\R2Bot\\R2Bot\\res\\config.txt";
 
 // Period between updates to Base (in milliseconds)
 const int WHEEL_POS_UPDATE_PERIOD = 200;
@@ -34,26 +35,30 @@ int _tmain(int argc, _TCHAR* argv[]) {
 
 			// Initialize system components.
 
-			WheelController wctrl(config.wheelsComPort);
-			HeadController hctrl(config.headComPort, config.flapComPort);
+			//WheelController wctrl(config.wheelsComPort);
+			//HeadController hctrl(config.headComPort, config.flapComPort);
 
-			BaseToBotImpl* baseToBot = new BaseToBotImpl(wctrl, hctrl, config.connTimeout, service);
+			BaseToBotImpl* baseToBot = new BaseToBotImpl(config.connTimeout, service);
+			//BaseToBotImpl* baseToBot = new BaseToBotImpl(wctrl, hctrl, config.connTimeout, service);
 			BaseConnection baseConn(baseToBot, config.botPort, config.basePort);
 
-			Arduino arduino(config.arduinoComPort);
+			RPLidarController::startLidar(config.lidarComPort, "115200");
+			//RPLidarController::test();
+
+			//Arduino arduino(config.arduinoComPort);
 			//PowerMonitor powerMonitor(arduino, baseConn);
 			//PeriodicTimer<PowerMonitor> powerTimer(powerMonitor, POWER_UPDATE_PERIOD, service);
 
-			Fpga fpga;
-			InventoryMonitor invMonitor(fpga, baseConn);
-			PeriodicTimer<InventoryMonitor> invTimer(invMonitor, INVENTORY_UPDATE_PERIOD, service);
+			//Fpga fpga;
+			//InventoryMonitor invMonitor(fpga, baseConn);
+			//PeriodicTimer<InventoryMonitor> invTimer(invMonitor, INVENTORY_UPDATE_PERIOD, service);
 
 			//RangeFinderMonitor rfMonitor(fpga, wctrl);
 			//PeriodicTimer<RangeFinderMonitor> rfTimer(rfMonitor, RANGEFINDER_UPDATE_PERIOD, service);
 
 			// Start vision system.
-			VisionCommImpl visionComm(baseConn, wctrl, arduino);
-			Vision vision(visionComm, config.lidarComPort);
+			//VisionCommImpl visionComm(baseConn, wctrl, arduino);
+			//Vision vision(visionComm, config.lidarComPort);
 			
 			// Add dummy work to prevent service.run() from exiting immediately.
 			boost::asio::io_service::work work(service);

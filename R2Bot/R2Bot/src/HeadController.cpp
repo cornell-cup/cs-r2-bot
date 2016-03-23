@@ -6,6 +6,7 @@ namespace R2D2 {
 	const int FLAP_OPEN_COMMAND = 0;
 	const int FLAP_CLOSE_COMMAND = 0;
 	
+
 	HeadController::HeadController(const std::string& headSerial, const std::string& flapSerial)
 			: head(headSerial.c_str()), flap(flapSerial.c_str()) {
 		head.send("1,start");
