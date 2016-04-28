@@ -114,3 +114,4 @@
 [23:26:39 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
 [23:52:23 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
 [23:57:12 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'
+[20:26:37 ERROR] Failed to read config file: unrecognised option 'Devices.LidarComPort'

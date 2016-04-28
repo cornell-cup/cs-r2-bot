@@ -22,6 +22,7 @@
     <ClCompile Include="src\MotorController.cpp" />
     <ClCompile Include="src\PositionMonitor.cpp" />
     <ClCompile Include="src\Arduino.cpp" />
+    <ClCompile Include="src\Serial.cpp" />
     <ClCompile Include="src\Util.cpp" />
     <ClCompile Include="src\VisionCommImpl.cpp" />
     <ClCompile Include="src\WheelController.cpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="src\MotorController.h" />
     <ClInclude Include="src\PositionMonitor.h" />
     <ClInclude Include="src\Arduino.h" />
+    <ClInclude Include="src\Serial.h" />
     <ClInclude Include="src\Util.h" />
     <ClInclude Include="src\VisionCommImpl.h" />
     <ClInclude Include="src\WheelController.h" />
@@ -49,12 +51,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SLAM\Vision\Kinect\Kinect.vcxproj">
-      <Project>{6b37a327-54c0-4e43-a852-b70a41cac630}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\SLAM\Vision\Lidar\Lidar.vcxproj">
-      <Project>{8e2a813c-f61b-4b6c-ba43-cd457bbea148}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\SLAM\Vision\Vision.vcxproj">
       <Project>{6084de33-f7f9-4c99-9e66-ba3af14bdc35}</Project>
       <Private>true</Private>
@@ -70,9 +66,6 @@
       <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
-    </ProjectReference>
-    <ProjectReference Include="..\Lidar\project\src\rplidar_driver\rplidar_driver.vcxproj">
-      <Project>{1f0aa469-8a8f-4ada-931d-967d2c5996df}</Project>
     </ProjectReference>
     <ProjectReference Include="..\PCIE\PCIE.vcxproj">
       <Project>{6e8b636e-f6da-4165-bd80-aba225ba7b99}</Project>
@@ -119,7 +112,7 @@
     <LinkIncremental>false</LinkIncremental>
     <SourcePath>.;src;$(SourcePath)</SourcePath>
     <LibraryPath>D:\r2-bot\R2Bot\Lidar\output\win32\Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>D:\r2-bot\R2Bot\Lidar\project\src\rplidar_controller;D:\r2-bot\R2Bot\Lidar\sdk\include;src;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\SLAM\Vision\include;D:\r2-bot\R2Bot\Lidar\project\src\rplidar_controller;D:\r2-bot\R2Bot\Lidar\sdk\include;src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

@@ -60,6 +60,9 @@
     <ClCompile Include="..\Lidar\project\src\rplidar_controller\RPLidarController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Serial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BaseToBotImpl.h">
@@ -108,6 +111,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Lidar\project\src\rplidar_controller\RPLidarController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Serial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

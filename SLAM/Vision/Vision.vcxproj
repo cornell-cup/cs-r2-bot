@@ -11,12 +11,54 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ConstantKalmanFilter.cpp" />
+    <ClCompile Include="src\EncoderData.cpp" />
+    <ClCompile Include="src\EncoderSensor.cpp" />
+    <ClCompile Include="src\HighwayData.cpp" />
+    <ClCompile Include="src\HighwaySensor.cpp" />
+    <ClCompile Include="src\IMUData.cpp" />
+    <ClCompile Include="src\IMUSensor.cpp" />
+    <ClCompile Include="src\KalmanFilter.cpp" />
+    <ClCompile Include="src\KinectData.cpp" />
+    <ClCompile Include="src\KinectSensor.cpp" />
+    <ClCompile Include="src\LidarData.cpp" />
+    <ClCompile Include="src\LidarSensor.cpp" />
+    <ClCompile Include="src\Obstacle.cpp" />
+    <ClCompile Include="src\PhoneIMUSensor.cpp" />
+    <ClCompile Include="src\R2Kart.cpp" />
+    <ClCompile Include="src\R2State.cpp" />
+    <ClCompile Include="src\Sensor.cpp" />
+    <ClCompile Include="src\SensorData.cpp" />
+    <ClCompile Include="src\SensorDataBag.cpp" />
+    <ClCompile Include="src\UltrasoundData.cpp" />
+    <ClCompile Include="src\UltrasoundSensor.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Vision.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\ConstantKalmanFilter.h" />
+    <ClInclude Include="include\EncoderData.h" />
+    <ClInclude Include="include\EncoderSensor.h" />
+    <ClInclude Include="include\HighwayData.h" />
+    <ClInclude Include="include\HighwaySensor.h" />
+    <ClInclude Include="include\IMUData.h" />
+    <ClInclude Include="include\IMUSensor.h" />
+    <ClInclude Include="include\KalmanFilter.h" />
+    <ClInclude Include="include\KinectData.h" />
+    <ClInclude Include="include\KinectSensor.h" />
+    <ClInclude Include="include\LidarData.h" />
+    <ClInclude Include="include\LidarSensor.h" />
+    <ClInclude Include="include\Obstacle.h" />
+    <ClInclude Include="include\PhoneIMUSensor.h" />
+    <ClInclude Include="include\R2State.h" />
+    <ClInclude Include="include\Sensor.h" />
+    <ClInclude Include="include\SensorData.h" />
+    <ClInclude Include="include\SensorDataBag.h" />
+    <ClInclude Include="include\targetver.h" />
+    <ClInclude Include="include\UltrasoundData.h" />
+    <ClInclude Include="include\UltrasoundSensor.h" />
     <ClInclude Include="PeriodicTimer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -26,8 +68,8 @@
     <ProjectReference Include="..\..\R2Bot\BotComm\BotComm.vcxproj">
       <Project>{e4d44729-09a6-4d26-a369-d09f2a630ef3}</Project>
     </ProjectReference>
-    <ProjectReference Include="Lidar\Lidar.vcxproj">
-      <Project>{8e2a813c-f61b-4b6c-ba43-cd457bbea148}</Project>
+    <ProjectReference Include="..\R2Kinect\R2Kinect.vcxproj">
+      <Project>{d7e3d5c2-e53b-4a0e-a417-93a3a87d29a4}</Project>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -63,11 +105,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(BOOST_PATH)\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\Libraries\armadillo\include;..\R2Kinect;..\rplidar_driver\include;$(BOOST_PATH)\include;C:\Program Files\Microsoft SDKs\Kinect\v1.8\inc;$(IceInclude);D:\r2-bot\SLAM\Vision\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(BOOST_PATH)\lib\$(Configuration);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(IceInclude);$(IncludePath);..\..\R2Bot</IncludePath>
+    <IncludePath>..\..\Libraries\armadillo\include;..\R2Kinect;..\rplidar_driver\include;$(BOOST_PATH)\include;C:\Program Files\Microsoft SDKs\Kinect\v1.8\inc;$(IceInclude);D:\r2-bot\SLAM\Vision\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -12,10 +12,18 @@
 #include <thread>
 #include <boost/asio/io_service.hpp>
 
+#include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
 #include <tchar.h>
 
+#define PI 3.141592654
 
+#include <string>
+#include <vector>
 
-// TODO: reference additional headers your program requires here
+#undef UNICODE
+#define UNICODE
+#undef _WINSOCKAPI_
+#define _WINSOCKAPI_
+#include <windows.h>

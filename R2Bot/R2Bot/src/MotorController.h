@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Util.h"
-#include "Lidar/Serial.h"
+#include "Serial.h"
 #include <string>
 #include <regex>
 
