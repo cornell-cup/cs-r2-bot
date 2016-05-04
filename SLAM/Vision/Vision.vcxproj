@@ -14,6 +14,7 @@
     <ClCompile Include="src\ConstantKalmanFilter.cpp" />
     <ClCompile Include="src\EncoderData.cpp" />
     <ClCompile Include="src\EncoderSensor.cpp" />
+    <ClCompile Include="src\GlueSensor.cpp" />
     <ClCompile Include="src\HighwayData.cpp" />
     <ClCompile Include="src\HighwaySensor.cpp" />
     <ClCompile Include="src\IMUData.cpp" />
@@ -41,6 +42,7 @@
     <ClInclude Include="include\ConstantKalmanFilter.h" />
     <ClInclude Include="include\EncoderData.h" />
     <ClInclude Include="include\EncoderSensor.h" />
+    <ClInclude Include="include\GlueSensor.h" />
     <ClInclude Include="include\HighwayData.h" />
     <ClInclude Include="include\HighwaySensor.h" />
     <ClInclude Include="include\IMUData.h" />

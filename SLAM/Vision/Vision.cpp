@@ -4,6 +4,11 @@
 #include <thread>
 #include <math.h>
 
+#include "easywsclient.hpp"
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#pragma comment (lib, "Ws2_32.lib")
+
 #include "LidarSensor.h"
 #include "UltrasoundSensor.h"
 #include "KinectSensor.h"
@@ -22,6 +27,10 @@ Vision::Vision(R2D2::VisionComm& visionComm, const std::string& lidarComPort)
 	botPosition.x = botPosition.y = 30.5;
 	botPosition.theta = 0;
     
+	// Initialize winsock
+	WSADATA wsaData;
+	int wsResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
+
 	// RP Lidar
 	Sensor * lidar = new LidarSensor(lidarComPort);
 	sensors.push_back(lidar);
@@ -132,9 +141,9 @@ R2D2::BotPosition Vision::getImuPosition() {
         double accMag = sqrt(id->accelX * id->accelX + id->accelY * id->accelY);
         double nextAcc = accKF.update(accMag);
         double nextVel = velKF.update(nextAcc * id->dt);
-		pos.theta = id->gyroX;
-        pos.x += nextVel * id->dt * cos(pos.theta);
-        pos.y += nextVel * id->dt * sin(pos.theta);
+		pos.theta = (float) (id->gyroX);
+		pos.x += (float) (nextVel * id->dt * cos(pos.theta));
+		pos.y += (float) (nextVel * id->dt * sin(pos.theta));
     }
     
     botPosition.x = pos.x;
