@@ -5,19 +5,15 @@ class KinectData : public SensorData {
 protected:
 	// Private/protected variables here
 public:
-	KinectData(bool hasData, UINT32 * inCamera, UINT16 * inDepth, double inDiff = 0.0);
+	KinectData(bool hasData, std::vector<double> obstacleX, std::vector<double> obstacleY);
 	~KinectData();
 
 	/**
-	 * Image seen through the camera
+	 * Array of x coordinates of obstacles
 	 */
-	UINT32 * camera;
+	std::vector<double> obstacleX;
 	/**
-	 * Depth image seen through camera
+	 * Array of y coordinates of obstacles
 	 */
-	UINT16 * depth;
-	/**
-	 * Difference between current and previous frames
-	 */
-	double diff;
+	std::vector<double> obstacleY;
 };

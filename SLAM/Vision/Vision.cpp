@@ -4,6 +4,7 @@
 #include <thread>
 #include <math.h>
 
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 #include "easywsclient.hpp"
 #include <winsock2.h>
 #include <ws2tcpip.h>
@@ -11,7 +12,7 @@
 
 #include "LidarSensor.h"
 #include "UltrasoundSensor.h"
-#include "KinectSensor.h"
+#include "NUCSensor.h"
 
 const float PI2 = 2.f * 3.1415926f;
 const float FEET_PER_CM = 0.0328084f;
@@ -31,9 +32,14 @@ Vision::Vision(R2D2::VisionComm& visionComm, const std::string& lidarComPort)
 	WSADATA wsaData;
 	int wsResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
 
+	// NUC Data
+	// TODO Receive this from the configuration file
+	Sensor * nuc = new NUCSensor("0.0.0.0", 11000);
+	sensors.push_back(nuc);
+
 	// RP Lidar
-	Sensor * lidar = new LidarSensor(lidarComPort);
-	sensors.push_back(lidar);
+	//Sensor * lidar = new LidarSensor(lidarComPort);
+	//sensors.push_back(lidar);
 
 	// Ultrasound
 	std::vector<std::string> locations;
@@ -42,8 +48,8 @@ Vision::Vision(R2D2::VisionComm& visionComm, const std::string& lidarComPort)
 	locations.push_back("Left shoulder");
 	locations.push_back("Right shoulder");
 	locations.push_back("Back");
-	Sensor * ultrasound = new UltrasoundSensor("\\\\.\\com11", locations);
-	sensors.push_back(ultrasound);
+	//Sensor * ultrasound = new UltrasoundSensor("\\\\.\\com11", locations);
+	//sensors.push_back(ultrasound);
 
 	std::thread([this] {
 		std::function<void()> updateBotPositionFn = [this] { updateBotPosition(); };

@@ -84,7 +84,13 @@
     <ClCompile Include="src\HighwaySensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GlueSensor.cpp">
+    <ClCompile Include="SerialPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UDPSocketServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NUCSensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -164,7 +170,13 @@
     <ClInclude Include="include\UltrasoundSensor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\GlueSensor.h">
+    <ClInclude Include="SerialPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UDPSocketServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NUCSensor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

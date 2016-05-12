@@ -41,6 +41,3 @@ ConnectionTimeout = 1000
 # COM port to which the Lidar is attached.
 LidarComPort = \\\\.\\COM22
 
-# COM port to which the Kinect is attached.
-#KinectComPort = COM5
-

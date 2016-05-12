@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "KinectData.h"
 
-KinectData::KinectData(bool inData, UINT32 * inCamera, UINT16 * inDepth, double inDiff)
-	: SensorData(inData), camera(inCamera), depth(inDepth), diff(inDiff) {
+KinectData::KinectData(bool inData, std::vector<double> inObstacleX, std::vector<double> inObstacleY)
+	: SensorData(inData), obstacleX(inObstacleX), obstacleY(inObstacleY) {
 
 }
 

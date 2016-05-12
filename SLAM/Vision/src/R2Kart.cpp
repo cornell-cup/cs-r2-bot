@@ -206,7 +206,7 @@ R2State updateState(SensorDataBag * sdata) {
 			state.obstacles.push_back(Obstacle(px, py, 0.5, -1.0));
 		}
 	}
-
+	/*
 	// Kinect
 	KinectData * kd = sdata->kinect;
 	if (kd != NULL && kd->hasData) {
@@ -252,9 +252,9 @@ R2State updateState(SensorDataBag * sdata) {
 			}
 
 			// Depth difference
-			state.depthDiff = kd->diff;
+			//state.depthDiff = kd->diff;
 		}
-	}
+	} */
 
 	return state;
 }

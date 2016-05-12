@@ -1,13 +1,15 @@
 #pragma once
 #include "Sensor.h"
-#include "easywsclient.hpp"
+#include "UDPSocketServer.h"
 
 // class defines an insttance of a sensor
-class GlueSensor : public Sensor {
+class NUCSensor : public Sensor {
 protected:
+	// UDP Server
+	UDPSocketServer * server;
+
 	// Private/protected variables here
 	KinectData * tmpKinectData;
-
 
 public:
 	// Public variables here
@@ -15,19 +17,17 @@ public:
 	std::string name; // name of sensor
 	int id; // unique identifier
 	static int count; // Number of sensors (used for ID)
-
-	// Client connection
-	easywsclient::WebSocket::pointer wsc;
+	std::vector<double> obstacleX, obstacleY;
 
 	/**
 	* Sensor constructor.
 	*/
-	GlueSensor(std::string inName);
+	NUCSensor(std::string inAddress, int inPort);
 
 	/**
 	* Sensor destructor.
 	*/
-	~GlueSensor();
+	~NUCSensor();
 
 	/**
 	* If this sensor is available, getData fills the corresponding SensorDataBag member with data from this sensor.

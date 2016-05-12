@@ -29,7 +29,7 @@ void KinectSensor::getData(SensorDataBag * sdata) {
 		depthPtr++;
 	}
 
-	sdata->kinect = new KinectData(true, colorBuffer, depthBuffer, diff / (640.0 * 480.0));
+	//sdata->kinect = new KinectData(true, colorBuffer, depthBuffer, diff / (640.0 * 480.0));
 	//printf("%lf\n", (diff / (640.0 * 480.0)));
 }
 
