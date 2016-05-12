@@ -14,8 +14,10 @@
 #include "UltrasoundSensor.h"
 #include "NUCSensor.h"
 
+#define M_PI 3.1415926536
 const float PI2 = 2.f * 3.1415926f;
 const float FEET_PER_CM = 0.0328084f;
+const float FEET_PER_METER = 3.28084f;
 
 // Spacing between wheels in cm, measured from center of one wheel to center of the other.
 const float WHEEL_SPACING = 52.5;
@@ -38,8 +40,8 @@ Vision::Vision(R2D2::VisionComm& visionComm, const std::string& lidarComPort)
 	sensors.push_back(nuc);
 
 	// RP Lidar
-	//Sensor * lidar = new LidarSensor(lidarComPort);
-	//sensors.push_back(lidar);
+	Sensor * lidar = new LidarSensor(lidarComPort);
+	sensors.push_back(lidar);
 
 	// Ultrasound
 	std::vector<std::string> locations;
@@ -84,14 +86,20 @@ void Vision::updateOccupancyGrid() {
 	if (ld != NULL && ld->hasData) {
 		int l = ld->angles.size();
 		for (int i = 0; i < l; i++) {
-			double angle = ld->angles[i];
-			double distance = ld->distances[i];
+			double angle = ld->angles[i] / 180.0 * M_PI + botPosition.theta;
+			double distance = FEET_PER_METER * ld->distances[i];
 			int px = int(distance * cos(angle * PI / 180.0) + botPosition.x);
 			int py = int(distance * sin(angle * PI / 180.0) + botPosition.y);
             if (0 <= py && py < GRID_HEIGHT && 0 <= px && px < GRID_WIDTH) {
                 grid[i] |= 1ULL << px;
             }
 		}
+	}
+
+	// NUC / Kinect obstacles
+	KinectData * kd = sdata->kinect;
+	if (kd != NULL && kd->hasData) {
+		// TODO
 	}
     
 	visionComm.updateObstacleGrid(grid);
@@ -152,8 +160,8 @@ R2D2::BotPosition Vision::getImuPosition() {
 		pos.y += (float) (nextVel * id->dt * sin(pos.theta));
     }
     
-    botPosition.x = pos.x;
-    botPosition.y = pos.y;
+    botPosition.x = FEET_PER_METER * pos.x;
+    botPosition.y = FEET_PER_METER * pos.y;
 	botPosition.theta = pos.theta;
 	return pos;
 }
